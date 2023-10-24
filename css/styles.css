@@ -1,25 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap');
-/* CUSTOM PROPERTIES O Variables de CSS */
+
 /* Es importante definir las paletas de colores a usar en el proyecto */
 :root {
+    /* CUSTOM PROPERTIES o Variables de CSS */
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #FFC107;
     --secundario: #0097a7;
     --gris: #757575;
 }
-
 html {
-    font-size: 62.5%0;
+    font-size: 62.5%; /* Esta linea es importante agregar las en todos los proyectos ya que permite que 1rem = 10px, y que el texto se adapte muy bien a todos los dispositivos*/
 }
 body {
-    font-size: 16px; /* Estas lineas es importante agregar las en todos los proyectos ya que permite que 1rem = 10px, y que el texto se adapte muy bien a todos los dispositivos*/
+    font-size: 16px; /* Esta linea es importante agregar las en todos los proyectos ya que permite que 1rem = 10px, y que el texto se adapte muy bien a todos los dispositivos*/
     font-family: 'Krub', sans-serif;
 }
+
+/* Estilos al título */
 .titulo {
     text-align: center;
     font-size: 3.8rem; /* 3.8rem = 38px */
 }
 .titulo span {
     font-size: 2rem;
+}
+
+/* Estilos a la barra de navegación  */
+.contenedor {
+    width: 60rem;
+    margin: 0 auto 0 auto;
+}
+.nav-bg { /* Agrega el bg en este contenedor */
+    background-color:  var(--secundario);
+}
+.navegacionPrincipal {
+    display: flex; /* Flex permite que en este contenedor se puedan usar las propiedas para organizar mejor cada elemento (los enlaces o etiquetas a) */
+    justify-content: space-between; /* Organiza los elementos hijos (o el contenido) con especio entre ellos */
+}
+.navegacionPrincipal a {
+    padding: 1rem; /* Margen que se aplica en el interior del contenedor para que sea mas gruesa*/
+    color: var(--blanco);
+    text-decoration: none; /* Todos las propiedades que empiecen con text, modifican las fuentes (fonts) */
+    font-size: 2rem;
+    font-weight: 700;
+}
+.navegacionPrincipal a:hover {
+    background-color: var(--primario); /* Cambia el color de fondo cuando se cursor se para sobre cada enlace*/
+    color: var(--oscuro); /* Cabia el color del texto cuando el cursor se para en el enlace */
 }
