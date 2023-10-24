@@ -1,0 +1,23 @@
+/* CUSTOM PROPERTIES O Variables de CSS */
+/* Es importante definir las paletas de colores a usar en el proyecto */
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
+html {
+    font-size: 62.5%0;
+}
+body {
+    font-size: 16px; /* Estas lineas es importante agregar las en todos los proyectos ya que permite que 1rem = 10px, y que el texto se adapte muy bien a todos los dispositivos*/
+}
+.titulo {
+    text-align: center;
+    font-size: 3.8rem; /* 3.8rem = 38px */
+}
+.titulo span {
+    font-size: 2rem;
+}
