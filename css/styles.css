@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap');
 /* CUSTOM PROPERTIES O Variables de CSS */
 /* Es importante definir las paletas de colores a usar en el proyecto */
 :root {
@@ -13,6 +14,7 @@ html {
 }
 body {
     font-size: 16px; /* Estas lineas es importante agregar las en todos los proyectos ya que permite que 1rem = 10px, y que el texto se adapte muy bien a todos los dispositivos*/
+    font-family: 'Krub', sans-serif;
 }
 .titulo {
     text-align: center;
