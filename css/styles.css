@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap');
+
+/* Es importante definir las paletas de colores a usar en el proyecto */
+:root {
+    /* CUSTOM PROPERTIES o Variables de CSS */
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+/* Globales o universales */
+html {
+    font-size: 62.5%; /* Esta linea es importante agregar las en todos los proyectos ya que permite que 1rem = 10px, y que el texto se adapte muy bien a todos los dispositivos*/
+    box-sizing: border-box; /* Propiedad que permite hacer que las medidas de los conenedores sean precisas, y no se reduzcan debido al margin, padding o el borde, basado en el box model*/
+    scroll-snap-type: y mandatory; /* Propiedad para Agregar scroll al html */
+}
+/* Scroll Snap por sesiones del proyecto */
+.servicios, .navegacionPrincipal, .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+*, *:before, *:after {  /* El selector * es un selector universal, por lo que selecciona todos los elementos del HTML  */
+  box-sizing: inherit;
+}
+body {
+    font-size: 16px; /* Esta linea es importante agregar las en todos los proyectos ya que permite que 1rem = 10px, y que el texto se adapte muy bien a todos los dispositivos*/
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, #DFE9FE 0%, var(--blanco) 100%); /* Esta propiedad junto con estas especificaciones se usan para agregar degradados */
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+.boton { /* estilos al boton del hero y del formulario */
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase; /* Esta propiedad convierte todo a masyúsculas */
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 780px) { /* Diseño responsive para cuando la pantalla supera los 768px */
+    .boton {
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.70);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Tipoagrafia a los titulos o Headings */
+h1 {
+    font-size: 3.8rem; /* 3.8rem = 38px */
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Titulo Principal */
+.titulo span {
+    font-size: 2rem;
+}
+
+/* Barra de navegación  */
+.nav-bg { /* Agrega el bg en este contenedor */
+    background-color:  var(--secundario);
+    
+}
+.navegacionPrincipal {
+    display: flex; /* Flex permite que en este contenedor se puedan usar las propiedas para organizar mejor cada elemento (los enlaces o etiquetas a) */
+    flex-direction: column;
+    align-items: center;
+} 
+
+@media (min-width: 768px) { /* Diseño responsive para cuando la pantalla supera los 768px */
+    .navegacionPrincipal {
+        flex-direction: row;
+        justify-content: space-between; /* Organiza los elementos hijos (o el contenido) con especio entre ellos */
+    }
+}
+.navegacionPrincipal a {
+    padding: 1rem; /* Margen que se aplica en el interior del contenedor para que sea mas gruesa*/
+    color: var(--blanco);
+    text-decoration: none; /* Todos las propiedades que empiecen con text, modifican las fuentes (fonts) */
+    font-size: 2rem;
+    font-weight: 700;
+}
+.navegacionPrincipal a:hover {
+    background-color: var(--primario); /* Cambia el color de fondo cuando se cursor se para sobre cada enlace*/
+    color: var(--oscuro); /* Cabia el color del texto cuando el cursor se para en el enlace */
+}
+
+/* Estilos del section class="hero*/
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat; /* Propiedad que se usa para que no se repita la imagen de fondo en el contenedor */
+    background-size: cover; /* Permite que la imgen se ajuste al tamaño del contenedor dependiendo del dispositivo */ 
+    height: 400px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido-hero {
+    position: absolute;
+    /*background-color: rgba(0, 0, 0, .7); */ /* Esta es una manera antigua de agregar transparencia */
+    background-color: rgb( 0 0 0 / 70%); /* Esta es una manera también de agragar transparencia */
+    width: 100%;
+    height: 100%;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Permite alinear los elementos horizontalmente */
+    justify-content: center; /* Permite alinear los elementos verticalmente */ 
+
+    /* Esta es una manera de alinear centrado
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Permite alinear los elementos horizontalmente */
+    /* align-items: center; /* Permite alinear los elementos verticalmente */ 
+}
+.contenido-hero h2, .contenido-hero p  {
+    color: var(--blanco);
+}
+
+/* Servicios */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem; /* Propiedad que permite agregar separación entre las columnas*/
+    }
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio p {
+    line-height: 2.5rem; /* Interlineado entre frases*/
+    text-align: center;
+}
+.servicio .iconos {
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex; /* Recordar que por default tenemos el flex direction:row  */
+    justify-content: space-evenly;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+    
+}
+
+/* Flormulario */
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* min() permite utilizar el valor más pequeño */
+    margin: 0 auto; /* Es una manera de centrar cuando el elemento no tiene asignado un diplay flex, o sea, tiene el diplay block por default*/
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+@media (min-width: 768px) {
+    .contenedorCampos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* O sea, tener dos colomnas cada una de ancho del 50% del contenedor, Lo mismo que tener 50% 50% */ 
+        grid-template-rows: auto auto 23rem;
+        column-gap: 1rem; 
+    }
+
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+    
+}
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    
+}
+.enviar .boton {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .enviar .boton {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: end;
+}
+.campo textarea {
+    height: 20rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+}
