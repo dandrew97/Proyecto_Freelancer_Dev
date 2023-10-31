@@ -30,9 +30,27 @@ Se han aplicado estilos y diseño responsivo para garantizar una apariencia atra
 
 Este proyecto ha sido desarrollado por Andrea Campos (dandrew97), un profesional independiente en formación en Diseño y Desarrollo Web. 
 
-
-
-
 link sitio web: https://developerfreelancer1.netlify.app
 
 LinkedIn: www.linkedin.com/in/dandrew97
+
+## Previsualización del proyecto
+![Captura de pantalla 2023-10-31 174107](https://github.com/dandrew97/Proyecto_Freelancer_Dev/assets/104542522/107aba4e-7022-4096-8b6a-b975903d3c31)
+
+![Captura de pantalla 2023-10-31 174120](https://github.com/dandrew97/Proyecto_Freelancer_Dev/assets/104542522/6776f2e8-048a-4d26-9092-85f522868fc0)
+
+![Captura de pantalla 2023-10-31 174144](https://github.com/dandrew97/Proyecto_Freelancer_Dev/assets/104542522/c0ddc668-b416-44d0-9f22-347ae1fd8eb2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
